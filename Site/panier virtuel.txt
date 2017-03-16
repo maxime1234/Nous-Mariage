@@ -1,0 +1,59 @@
+<?php
+    // Dans ce script nous utilisons les sessions
+    session_start();
+    
+    if ($_GET["action"]=="destroy") {
+        // on a demander à tout supprimer
+        session_destroy();
+        header("Location: ".$_SERVER["PHP_SELF"]);
+        die();
+    }
+
+    if (isset($_GET["raz"])) {
+        // On a demandé à reinitialiser une valeur
+        switch ($_GET["raz"]) {
+            case "pomme":
+                unset($_SESSION["pommes"]);
+                break;
+            case "poire":
+                unset($_SESSION["poires"]);
+                break;
+            case "banane":
+                unset($_SESSION["bananes"]);
+                break;
+            }
+        header("Location: ".$_SERVER["PHP_SELF"]);
+        die();
+    }
+    
+    if (isset($_GET["achat"])) {
+        // On a demandé à incrémenter une valeur    
+        switch ($_GET["achat"]) {
+            case "pomme":
+                $_SESSION["pommes"]++;
+                 break;
+            case "poire":
+                $_SESSION["poires"]++;
+                 break;
+            case "banane":
+                $_SESSION["bananes"]++;
+                 break;
+        }
+        header("Location: ".$_SERVER["PHP_SELF"]);
+        die();
+   }     
+?>
+Nb Pommes:<?php echo $_SESSION["pommes"];?><br />
+<a href="<?php echo $_SERVER["PHP_SELF"];?>?achat=pomme">Acheter une pomme</a>
+<a href="<?php echo $_SERVER["PHP_SELF"];?>?raz=pomme">RAZ</a><br />
+
+Nb Poires:<?php echo $_SESSION["poires"];?><br />
+<a href="<?php echo $_SERVER["PHP_SELF"];?>?achat=poire">Acheter une poire</a>
+<a href="<?php echo $_SERVER["PHP_SELF"];?>?raz=poire">RAZ</a><br />
+
+Nb Bananes:<?php echo $_SESSION["bananes"];?><br />
+<a href="<?php echo $_SERVER["PHP_SELF"];?>?achat=banane">Acheter une banane</a>
+<a href="<?php echo $_SERVER["PHP_SELF"];?>?raz=banane">RAZ</a><br />
+
+<br/>
+<a href="<?php echo $_SERVER["PHP_SELF"];?>?action=destroy">Détruire la session</a><br/>
