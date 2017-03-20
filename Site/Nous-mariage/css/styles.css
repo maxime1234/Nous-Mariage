@@ -24,4 +24,9 @@ main {
 }
 aside {
   background: ##FFB6C1;
+  body
+{
+    background: url('mariage.jpeg');
+    font-family: Arial, serif;
+    color: #E45523;
 }
