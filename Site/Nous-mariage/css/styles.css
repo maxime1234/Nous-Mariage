@@ -1,15 +1,15 @@
 ul {
-  background: #FEFEE2;
+  background: ##FFB6C1;
 }
 li, [class*="grid"] > * {
-  background: #FEFEE2;
+  background: ##FFB6C1;
 }
 header, footer {
-  background: #FEFEE2
+  background: ##FFB6C1
 }
 main {
-  background: #FEFEE2;
+  background: ##FFB6C1;
 }
 aside {
-  background: #FEFEE2;
+  background: ##FFB6C1;
 }
