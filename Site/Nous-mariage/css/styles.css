@@ -10,6 +10,18 @@ body
     margin: auto;
 }
 
+body
+{
+    background: url('mariage.jpeg');
+    font-family: Arial, serif;
+    color: #E45523;
+}
+#bloc_page
+{
+    width: 1000px;
+    margin: auto;
+}
+
 ul {
   background: ##FFB6C1;
 }
@@ -24,9 +36,15 @@ main {
 }
 aside {
   background: ##FFB6C1;
-  body
+
+}
+body
 {
     background: url('mariage.jpeg');
     font-family: Arial, serif;
     color: #E45523;
 }
+page
+{
+    width: 1000px;
+    margin: auto;
