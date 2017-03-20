@@ -1,0 +1,15 @@
+ul {
+  background: #FEFEE2;
+}
+li, [class*="grid"] > * {
+  background: #FEFEE2;
+}
+header, footer {
+  background: #FEFEE2
+}
+main {
+  background: #FEFEE2;
+}
+aside {
+  background: #FEFEE2;
+}
